@@ -54,23 +54,7 @@
             <h1>
               <a class="navbar-brand" href="index.html">Conte d'été</a>
             </h1>
-            <ul class="nav tm-navbar navbar-nav sf-menu">
-              <li class="active">
-                <a href="index.html">Accueil</a>
-              </li>
-              <li>
-                <a href="index-1.html">About</a>
-              </li>
-              <li>
-                <a href="index-2.html">Services</a>
-              </li>
-              <li>
-                <a href="index-3.html">News</a>
-              </li>
-              <li>
-                <a href="index-4.html">Contacts </a>
-              </li>
-            </ul>
+            <%= render 'menu' %>
           </div>
         </div>
       </div>
@@ -111,14 +95,8 @@
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <div class="footer-block">
-            <ul class="footer-menu">
-              <li><a href="index.html" class="current">Home</a></li>
-              <li><a href="index-1.html">About</a></li>
-              <li><a href="index-2.html">Services</a></li>
-              <li><a href="index-3.html">News</a></li>
-              <li><a href="index-4.html">Contacts</a></li>
-            </ul>
-            <span><!-- {%FOOTER_LINK} --> &copy; 2013<img src="<%= asset_path 'footer-line.png' %>" alt=""><a href="index-5.html">Privacy Policy</a></span>
+            <%= render 'menu', location: 'footer' %>
+            <span><!-- {%FOOTER_LINK} --> &copy; 2013</span>
           </div>
         </div>
       </div>

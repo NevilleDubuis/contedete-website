@@ -1,0 +1,9 @@
+<% if @location == 'footer' %>
+  <ul class="footer-menu">
+<% else %>
+  <ul class="nav tm-navbar navbar-nav sf-menu">
+<% end %>
+  <li <%= @item.identifier == '/' ? 'class="active"' : '' %> >
+    <a <%= @item.identifier == '/' ? 'class="current"' : '' %> href="index.html">Accueil</a>
+  </li>
+</ul>
