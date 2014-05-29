@@ -829,6 +829,7 @@ footer {
   display: inline-block;
   overflow: hidden;
   margin-top: 34px;
+  padding-left: 80px;
 }
 
 .social-icons li {
@@ -865,45 +866,55 @@ footer {
   border-left: #959692 1px solid;
 }
 
-.addr {
+.dates {
   text-align: center;
 }
 
-.addr span {
-  background: url(/assets/icon-5.png) 0 4px no-repeat;
-  padding-left: 40px;
+.dates p {
+  float: left;
+  padding-left: 20px;
   font-size: 18px;
   line-height: 26px;
   color: #fefefe;
   font-weight: 300;
   display: inline-block;
   text-align: left;
-  margin-top: 8px;
+  margin: 0;
 }
 
-.info-contacts {
+.dates span {
+  float: left;
+  padding-top: 0px;
+  padding-left: 40px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #fefefe;
+  font-weight: 300;
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+}
+
+.dates span b {
+  font-weight: normal;
+  text-decoration: none;
+  color: #8dc63f;
+}
+
+.info span {
+  padding-left: 40px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #fefefe;
+  font-weight: 300;
+  display: inline-block;
   text-align: center;
 }
 
-.info-contacts span {
-  display: inline-block;
-  text-align: left;
-  margin-top: 10px;
-}
-
-.info-contacts a {
-  display: inline-block;
-  font-size: 18px;
-  line-height: 24px;
-  color: #fdfdfd;
-  padding-left: 33px;
-  background: url(/assets/icon-7.png) 0 6px no-repeat;
-}
-
-.info-contacts a:first-child {
-  color: #a9ea50;
-  background: url(/assets/icon-6.png) 0 0 no-repeat;
-  margin-bottom: 10px;
+.info span b {
+  font-weight: normal;
+  text-decoration: none;
+  color: #8dc63f;
 }
 
 .footer-block {
