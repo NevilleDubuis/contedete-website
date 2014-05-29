@@ -1,0 +1,57 @@
+#!/usr/bin/env ruby
+
+require File.expand_path('../config/nanoc', __FILE__)
+
+############ Compile ############
+
+compile %r{/assets/(stylesheets|javascripts)/.+/} do
+  filter :sprockets, {
+    :css_compressor => Nanoc.production? ? :scss : nil,
+    :js_compressor => Nanoc.production? ? :uglifier : nil
+  }
+  snapshot :uncompressed
+  filter :gzip
+end
+
+compile %r{/assets/.+/} do
+  # don’t filter other assets items
+end
+
+compile '*' do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :erb
+    layout 'default'
+  end
+end
+
+############ Route ############
+
+route %r{/assets/(stylesheets|javascripts)/.+/}, :snapshot => :uncompressed do
+  Nanoc::Helpers::Sprockets.asset_path(item)
+end
+
+route %r{/assets/(stylesheets|javascripts)/.+/} do
+  Nanoc::Helpers::Sprockets.asset_path(item) + '.gz'
+end
+
+route %r{/assets/.+/} do
+  Nanoc::Helpers::Sprockets.asset_path(item)
+end
+
+route '/htaccess/' do
+  '/.htaccess'
+end
+
+route '*' do
+  if item.children.size > 0 || item.identifier == '/'
+    item.identifier + 'index.html'
+  else
+    item.identifier.gsub(/\/$/, '') + '.' + item[:extension]
+  end
+end
+
+############ Layout ############
+
+layout '*', :erb

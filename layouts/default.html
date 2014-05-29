@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Your description">
+  <meta name="keywords" content="Your keywords">
+  <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
+  <link rel="stylesheet" href="<%= stylesheet_path 'bootstrap' %>" >
+  <link rel="stylesheet" href="<%= stylesheet_path 'camera' %>">
+  <link rel="stylesheet" href="<%= stylesheet_path 'style' %>">
+  <link rel="stylesheet" href="<%= stylesheet_path 'colorbox' %>">
+  <link rel="stylesheet" href="<%= stylesheet_path 'jquery.jscrollpane' %>">
+  <script src="<%= javascript_path 'jquery.min' %>"></script>
+  <script src="<%= javascript_path 'jquery.plugin' %>"></script>
+  <script src="<%= javascript_path 'jquery.colorbox' %>"></script>
+  <script src="<%= javascript_path 'jquery-easing' %>"></script>
+  <script src="<%= javascript_path 'jquery-migrate' %>"></script>
+  <script src="<%= javascript_path 'engine.min' %>"></script>
+  <script src="<%= javascript_path 'html5' %>"></script>
+  <script src="<%= javascript_path 'camera' %>"></script>
+  <!--[if (gt IE 9)|!(IE)]><!-->
+    <script src="<%= javascript_path 'jquery-mobile-customized-min' %>"></script>
+  <!--<![endif]-->
+  <script src="<%= javascript_path 'jquery-ui-totop' %>"></script>
+  <script src="<%= javascript_path 'jquery-equalheights' %>"></script>
+  <script src="<%= javascript_path 'superfish' %>"></script>
+  <script src="<%= javascript_path 'jquery-mobilemenu' %>"></script>
+  <!--[if lt IE 9]>
+    <div style='text-align:center'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
+    <link rel="stylesheet" href="assets/tm/css/tm_docs.css" type="text/css" media="screen">
+    <script src="assets/assets/js/html5shiv.js"></script>
+    <script src="assets/assets/js/respond.min.js"></script>
+  <![endif]-->
+  <script>
+    $(document).ready(function(){
+      jQuery('.camera_wrap').camera();
+    });
+  </script>
+</head>
+
+<body>
+<!--==============================header=================================-->
+
+  <header id="header">
+    <div class="black-bg"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="header-block clearfix">
+            <h1>
+              <a class="navbar-brand" href="index.html"><img src="<%= image_path 'logo.png' %>" alt="decore"></a>
+            </h1>
+            <ul class="nav tm-navbar navbar-nav sf-menu">
+              <li class="active">
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="index-1.html">About</a>
+              </li>
+              <li>
+                <a href="index-2.html">Services</a>
+              </li>
+              <li>
+                <a href="index-3.html">News</a>
+              </li>
+              <li>
+                <a href="index-4.html">Contacts </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="content">
+    <div id="container">
+      <%= yield %>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <div class="border-right maxheight2">
+            <ul class="social-icons">
+              <li><a href="#"><img src="<%= asset_path 'icon-1.png' %>" alt=""></a></li>
+              <li><a href="#"><img src="<%= image_path 'icon-2.png' %>" alt=""></a></li>
+              <li><a href="#"><img src="<%= image_path 'icon-3.png' %>" alt=""></a></li>
+              <li><a href="#"><img src="<%= image_path 'icon-4.png' %>" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 addr">
+          <span>28 Jackson Blvd Ste 1020 <br>Chicago <br>IL 60604-2340</span>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <div class="border-left maxheight2 info-contacts">
+            <span>
+              <a href="#">info@demolink.org</a><br>
+              <a href="#">send online</a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="footer-block">
+            <ul class="footer-menu">
+              <li><a href="index.html" class="current">Home</a></li>
+              <li><a href="index-1.html">About</a></li>
+              <li><a href="index-2.html">Services</a></li>
+              <li><a href="index-3.html">News</a></li>
+              <li><a href="index-4.html">Contacts</a></li>
+            </ul>
+            <span><!-- {%FOOTER_LINK} --> &copy; 2013<img src="<%= asset_path 'footer-line.png' %>" alt=""><a href="index-5.html">Privacy Policy</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#" id="toTop" style="margin-right: -78px; right: 50%; display: block;"><span id="toTopHover" style="opacity: 0;"></span></a>
+</body>
+</html>
