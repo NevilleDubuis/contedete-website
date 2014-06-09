@@ -1,0 +1,61 @@
+---
+title: Contact
+---
+
+<div id="content" class="bot-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <h3 class="indent-1">contact info</h3>
+        <div class="map"><iframe src="https://maps.google.ch/maps/ms?msa=0&amp;msid=200693366488786261753.0004fb3e545782f0d09ad&amp;gl=ch&amp;ie=UTF8&amp;t=m&amp;z=17&amp;output=embed"></iframe><br /><small>Afficher <a href="https://maps.google.ch/maps/ms?msa=0&amp;msid=200693366488786261753.0004fb3e545782f0d09ad&amp;gl=ch&amp;ie=UTF8&amp;t=m&amp;z=17&amp;source=embed" style="color:#0000FF;text-align:left">Théâtre Benno Besson</a> sur une carte plus grande</small></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <h3>adresse</h3>
+        <address class="address" >
+          <p>Théâtre Benno Besson<br />
+            Rue du Casino 9, <br />
+            Case postale 1331,<br />
+            CH-1401 Yverdon-les-Bains
+          </p>
+          <p>
+            <span>Billeterie</span> +41 24 423 65 84<br />
+            E-mail: <a href="mailto:ttb@yverdon-les-bains.ch">ttb@yverdon-les-bains.ch</a>
+          </p>
+        </address>
+      </div>
+      <div class="col-sm-8 col-md-8 col-lg-8">
+          <h3 class="indent-1">Entrez en contact</h3>
+          <form id="contact-form" class="contact-form" method="post" action="/contact">
+            <div class="success" style="display: none;"> Votre Message à bien été envoyez, <strong>Nous vous répondrons au plus vite.</strong> </div>
+            <fieldset>
+              <div class="coll-1">
+                <label class="name">
+                  <input type="text" placeholder="Nom*" name="message_request[name]" ><br>
+                  <span class="error" style="display: none;">*Ce nom n'est pas valable.</span> <span class="empty" style="display: none;">*Ce champ est requis.</span> </label>
+              </div>
+              <div class="coll-2">
+                <label class="email">
+                  <input type="email" placeholder="Email*" name="message_request[email]" ><br>
+                  <span class="error" style="display: none;">*Cette addresse email est invalid.</span> <span class="empty" style="display: none;">*Ce Champ est requis.</span> </label>
+              </div>
+              <div class="coll-3">
+                <label class="phone notRequired">
+                  <input type="tel" placeholder="Téléphone" name="message_request[phone]" ><br>
+                </label>
+              </div>
+              <div class="clear"></div>
+              <div>
+                <label class="message">
+                  <textarea placeholder="Message*" name="message_request[message]" ></textarea><br>
+                  <span class="error" style="display: none;">*Ce message est trop court.</span> <span class="empty" style="display: none;">*Ce champ est requis.</span> </label>
+              </div>
+              <div class="clear"></div>
+              <div class="buttons-wrapper"><a class="btn" data-type="submit">Envoyer</a><span>*Champ requis</span></div>
+            </fieldset>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>

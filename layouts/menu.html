@@ -6,4 +6,10 @@
   <li <%= @item.identifier == '/' ? 'class="active"' : '' %> >
     <a <%= @item.identifier == '/' ? 'class="current"' : '' %> href="index.html">Accueil</a>
   </li>
+  <li <%= @item.identifier == '/auteurs/' ? 'class="active"' : '' %> >
+    <a <%= @item.identifier == '/auteurs/' ? 'class="current"' : '' %> href="auteurs.html">Auteurs</a>
+  </li>
+  <li <%= @item.identifier == '/contact/' ? 'class="active"' : '' %> >
+    <a <%= @item.identifier == '/contact/' ? 'class="current"' : '' %> href="contact.html">Contact</a>
+  </li>
 </ul>
