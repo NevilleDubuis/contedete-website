@@ -17,6 +17,10 @@ compile %r{/assets/.+/} do
   # don’t filter other assets items
 end
 
+compile '/goolec158faf1c1aaf5c5.html/' do
+
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -42,6 +46,10 @@ end
 
 route '/htaccess/' do
   '/.htaccess'
+end
+
+route '/goolec158faf1c1aaf5c5.html/' do
+  '/goolec158faf1c1aaf5c5.html'
 end
 
 route '*' do
