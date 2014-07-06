@@ -9,6 +9,12 @@
   <li <%= @item.identifier == '/auteurs/' ? 'class="active"' : '' %> >
     <a <%= @item.identifier == '/auteurs/' ? 'class="current"' : '' %> href="auteurs.html">Auteurs</a>
   </li>
+  <li <%= @item.identifier == '/createurs/' ? 'class="active"' : '' %> >
+    <a <%= @item.identifier == '/createurs/' ? 'class="current"' : '' %> href="createurs.html">Créateurs</a>
+  </li>
+  <li <%= @item.identifier == '/comediens/' ? 'class="active"' : '' %> >
+    <a <%= @item.identifier == '/comediens/' ? 'class="current"' : '' %> href="comediens.html">Comédiens</a>
+  </li>
   <li <%= @item.identifier == '/contact/' ? 'class="active"' : '' %> >
     <a <%= @item.identifier == '/contact/' ? 'class="current"' : '' %> href="contact.html">Contact</a>
   </li>

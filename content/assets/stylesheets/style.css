@@ -1267,4 +1267,36 @@ footer span strong {
 
 }
 
+p.sign {
+  text-align: right;
+}
+
+img.portrait {
+  float: left;
+  width: 350px;
+  height: 350px;
+  margin: 0 10px 10px 0;
+  padding-top: 10px;
+}
+
+blockquote.citation {
+  font-style: italic;
+  margin: 0.25em 0;
+  padding: 0.25em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #383838;
+  border-left: 0;
+}
+
+blockquote.citation:before {
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: #7a7a7a;
+}
+
 /*Core variables and mixins*/
