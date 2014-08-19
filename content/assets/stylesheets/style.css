@@ -470,7 +470,7 @@ header h1 a.navbar-brand:img {
 }
 
 .block-1 h3 {
-  margin: 68px 0 18px 0;
+  margin: 38px 0 18px 0;
   text-align: center;
 }
 
@@ -1273,7 +1273,7 @@ p.sign {
 
 img.portrait {
   float: left;
-  height: 350px;
+  max-height: 350px;
   margin: 0 10px 10px 0;
   padding-top: 10px;
 }
@@ -1299,3 +1299,17 @@ blockquote.citation:before {
 }
 
 /*Core variables and mixins*/
+
+#tabs-container {
+  margin-top: 10px;
+}
+
+.ui-widget-header {
+  border: none !important;
+  border-bottom: 1px solid #aaa !important;
+  background: none !important;
+}
+
+.ui-widget-content {
+  border: none !important;
+}
