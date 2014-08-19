@@ -19,3 +19,14 @@ group :nanoc do
   gem 'nanoc-sprockets-filter'
   gem 'nanoc-gzip-filter'
 end
+
+group :guard do
+  gem 'rb-fsevent'
+  gem 'guard'
+
+  gem 'guard-bundler'
+  gem 'guard-nanoc'
+
+  gem 'livereload'
+  gem 'guard-livereload'
+end
